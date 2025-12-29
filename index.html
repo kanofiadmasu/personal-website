@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,93 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <nav class="sidebar">
+        <div class="menu" id="menu" role="button" aria-expanded="false" aria-label="Toggle navigation"
+            aria-controls="sidebar">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </div>
+        <nav id="sidebar" class="sidebar">
             <div class="nav-links">
                 <a href="#about" class="nav-item">About</a>
                 <a href="#projects" class="nav-item">Projects</a>
                 <a href="#outside-school" class="nav-item">Outside School</a>
             </div>
 
-            <div class="menu" id="menu">
-                <span class="menu-bar"></span>
-                <span class="menu-bar"></span>
-                <span class="menu-bar"></span>
-            </div>
-            
             <div class="sidebar-footer">
                 <div class="social-links">
-                    <a href="#" target="_blank">X</a>
+                    <a href="https://x.com/kanofiadmasu" target="_blank">X</a>
                     <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">GitHub</a>
+                    <a href="https://github.com/kanofiadmasu" target="_blank">GitHub</a>
                 </div>
-                <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+                <button id="theme-toggle" class="theme-btn">Light Mode</button>
             </div>
         </nav>
     </header>
-        <main class="content">
-            <section id="about" class="section">
-                <h1>About</h1>
-                <p>Hello. I build things.</p>
-            </section>
-            
-            <section id="projects" class="section">
-                <h1>Projects</h1>
-                <div class="project-list">
+    <main class="content">
+        <section id="about" class="section">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis rem dolores autem odio nobis voluptatibus!
+                Quibusdam recusandae impedit velit aliquam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis rem dolores autem odio nobis voluptatibus!
+                Quibusdam recusandae impedit velit aliquam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis rem dolores autem odio nobis voluptatibus!
+                Quibusdam recusandae impedit velit aliquam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis rem dolores autem odio nobis voluptatibus!
+                Quibusdam recusandae impedit velit aliquam!
+            </p>
+        </section>
+
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <div class="project-list">
+                <!-- Project 1 -->
+                <a href="https://github.com/kanofiadmasu/Mini-CRM" target="_blank">
                     <div class="project-item">
-                        <h2>Project 1</h2>
-                        <p>Description of project 1.</p>
+                        <div class="img-wrapper">
+                            <img src="../Images/clarity-image.png" alt="Image for Project One">
+                        </div>
+                        <h2>Mini CRM</h2>
+                        <p>A Python only CLI text based Mini CRM to help freelancers with
+                            client, project, and finance management.</p>
                     </div>
-                     <div class="project-item">
-                        <h2>Project 2</h2>
-                        <p>Description of project 2.</p>
+                </a>
+                <!-- Project 2 -->
+                <a href="https://github.com/kanofiadmasu/Budget-Manager" target="_blank">
+                    <div class="project-item">
+                        <div class="img-wrapper">
+                            <img src="../Images/clarity-image.png" alt="Image for Project One">
+                        </div>
+                        <h2>Budget Manager</h2>
+                        <p>A command line text based app that helps manage personal income and expenses.</p>
                     </div>
-                </div>
-            </section>
-            
-            <section id="outside-school" class="section">
-                <h1>Outside School</h1>
-                <p>Photography, Hiking, Reading.</p>
-            </section>
-        </main>
+                </a>
+                <!-- Project 3 -->
+                <a href="https://github.com/kanofiadmasu/clarity-driving" target="_blank">
+                    <div class="project-item">
+                        <div class="img-wrapper">
+                            <img src="../Images/clarity-image.png" alt="Image for Project One">
+                        </div>
+                        <h2>Clarity Driving School</h2>
+                        <p>A simple landing page built for a driving school to enhance online presence and provide
+                            information about the school.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-
+        <section id="outside-school" class="section">
+            <h1>Outside School</h1>
+            <p>Photography, Hiking, Reading.</p>
+        </section>
+    </main>
 </body>
+
 </html>
