@@ -158,8 +158,9 @@ body {
 .content p {
     max-width: 600px;
     font-family: 'Inter-Regular';
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 1.6;
+    text-align: justify;
 }
 
 #about h2 {
