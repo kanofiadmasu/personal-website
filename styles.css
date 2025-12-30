@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-display: swap;
     font-family: 'Inter-Regular';
@@ -146,7 +150,7 @@ body {
     justify-content: space-around;
 }
 
-.content h1 {
+.content h2 {
     font-family: 'Inter-Regular', sans-serif;
     font-size: 1.5em;
 }
@@ -158,7 +162,7 @@ body {
     line-height: 1.6;
 }
 
-#about h1 {
+#about h2 {
     margin-bottom: 20px;
 }
 
@@ -184,6 +188,8 @@ body {
 .project-list a {
     text-decoration: none;
     color: var(--text-color);
+    display: block;
+    height: 100%;
 }
 
 img {
@@ -193,8 +199,8 @@ img {
 }
 
 .project-item {
-    /* border: 1px solid green; */
     padding: 20px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -235,7 +241,7 @@ img {
     margin-top: 35px;
 }
 
-#outside-school h1 {
+#outside-school h2 {
     margin-bottom: 15px;
 }
 
@@ -250,13 +256,16 @@ img {
     padding: 10px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    border: none;
+    background: transparent;
 }
 
 .menu-bar {
     display: block;
     width: 15px;
-    height: 2px;
+    height: 1.5px;
     margin: 5px auto;
+    border-radius: 2px;
     background-color: var(--text-color);
     transition: all 0.3s ease-in-out;
 }
@@ -275,7 +284,7 @@ img {
     .sidebar {
         transform: translateX(-100%);
         z-index: 999;
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.7s ease-in-out;
         width: 75%;
         max-width: 300px;
         box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
