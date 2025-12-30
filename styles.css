@@ -140,7 +140,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .content h1 {
@@ -236,4 +236,69 @@ img {
 
 #outside-school h1 {
     margin-bottom: 15px;
+}
+
+/* --- Menu / Hamburger Button (Hidden on Desktop) --- */
+.menu {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--lighter-black);
+}
+
+.menu-bar {
+    display: block;
+    width: 15px;
+    height: 1.5px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Mobile / Tablet Styles --- */
+@media (max-width: 768px) {
+
+    /* Show Menu Button */
+    .menu {
+        display: block;
+    }
+
+    /* Sidebar: Hidden by default, slides in */
+    .sidebar {
+        transform: translateX(-100%);
+        /* Move off-screen */
+        z-index: 999;
+        transition: transform 0.5s ease-in-out;
+        width: 75%;
+        /* Don't cover full width so user can click out */
+        max-width: 300px;
+        box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Class added by JS to show sidebar */
+    .sidebar.sidebar--open {
+        transform: translateX(0);
+    }
+
+    /* Main Content: Full width, reset margins */
+    .content {
+        margin-left: 0;
+        margin-top: 80px;
+        /* Space for the menu button if at top, or just breathing room */
+        width: 100%;
+        padding: 20px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+        /* Single column for projects on mobile */
+    }
 }
