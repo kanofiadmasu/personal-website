@@ -35,11 +35,16 @@
     --text-color: white;
     --near-black: hsl(0, 0%, 10%);
     --lighter-black: hsl(0, 0%, 25%);
+}
 
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --near-black: hsl(0, 0%, 90%);
+    --lighter-black: hsl(0, 0%, 75%);
 }
 
 body {
-    /* width: 100vw; */
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
@@ -56,7 +61,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    /* border-right: 1px solid var(--text-color); */
     background: var(--bg-color);
 }
 
@@ -96,7 +100,7 @@ body {
 .social-links {
     width: 100%;
     display: flex;
-    gap: 9px;
+    gap: 12px;
 }
 
 .social-links a {
@@ -140,7 +144,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* border: 1px solid red; */
 }
 
 .content h1 {
@@ -163,7 +166,6 @@ body {
 
 #projects {
     width: 100%;
-    /* border: 1px solid blue; */
     margin-top: 35px;
 }
 
@@ -173,7 +175,6 @@ body {
 }
 
 .project-list {
-    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
@@ -241,44 +242,41 @@ img {
 /* --- Menu / Hamburger Button (Hidden on Desktop) --- */
 .menu {
     display: none;
-    /* Hidden by default */
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--lighter-black);
+    transition: background-color 0.3s ease;
 }
 
 .menu-bar {
     display: block;
     width: 15px;
-    height: 1.5px;
+    height: 2px;
     margin: 5px auto;
     background-color: var(--text-color);
     transition: all 0.3s ease-in-out;
 }
 
+.menu:hover {
+    background-color: var(--near-black);
+}
+
 /* --- Mobile / Tablet Styles --- */
 @media (max-width: 768px) {
 
-    /* Show Menu Button */
     .menu {
         display: block;
     }
 
-    /* Sidebar: Hidden by default, slides in */
     .sidebar {
         transform: translateX(-100%);
-        /* Move off-screen */
         z-index: 999;
         transition: transform 0.5s ease-in-out;
         width: 75%;
-        /* Don't cover full width so user can click out */
         max-width: 300px;
         box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
     }
@@ -288,17 +286,13 @@ img {
         transform: translateX(0);
     }
 
-    /* Main Content: Full width, reset margins */
     .content {
-        margin-left: 0;
-        margin-top: 80px;
-        /* Space for the menu button if at top, or just breathing room */
+        margin: 80px 45px;
         width: 100%;
         padding: 20px;
     }
 
     .project-list {
         grid-template-columns: 1fr;
-        /* Single column for projects on mobile */
     }
 }

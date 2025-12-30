@@ -29,4 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Theme Toggle Functionality
+    const themeBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Initialize theme from saved preference or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', savedTheme);
+
+    if (themeBtn) {
+        themeBtn.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeBtn.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        });
+    }
 });
