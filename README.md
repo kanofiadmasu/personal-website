@@ -1,3 +1,3 @@
 # Personla Website
 
-This is my personal website, built using Simple HTML, CSS, and Javascript. 
+This is my personal website, built using simple HTML, CSS, and Javascript. 
