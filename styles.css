@@ -110,7 +110,7 @@ body {
 .social-links a {
     text-decoration: none;
     color: var(--text-color);
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-SemiBold';
     font-size: 0.825em;
 }
 
@@ -250,15 +250,20 @@ img {
 .menu {
     display: none;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 10px;
     z-index: 1000;
     cursor: pointer;
     padding: 10px;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     border: none;
     background: transparent;
+    transition: all 0.4s ease-in;
+}
+
+.menu.rotated {
+    transform: rotate(90deg);
 }
 
 .menu-bar {
@@ -268,7 +273,6 @@ img {
     margin: 5px auto;
     border-radius: 2px;
     background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
 }
 
 .menu:hover {

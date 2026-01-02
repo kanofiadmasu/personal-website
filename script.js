@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.addEventListener('click', () => {
         const isOpen = sidebar.classList.toggle('sidebar--open');
         menu.setAttribute('aria-expanded', String(isOpen));
+        // For rotating the humburger menu
+        menu.classList.toggle('rotated');
     });
 
     // Close sidebar after clicking a nav link (mobile)
